@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'formation3';
+  bgColor = 'yellow';
+  show = false;
+
+  // tslint:disable-next-line:typedef
+  changeStatus() {
+    this.show = !this.show;
+  }
 }

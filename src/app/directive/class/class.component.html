@@ -1,0 +1,17 @@
+<ol class="list-group">
+  <li class="list-group-item" *ngFor="let team of teams; let ind = index ">
+    {{ind}}- {{team}}
+  </li>
+</ol>
+<p [ngClass]="{'est' : false, 'barca' : true, 'milan' : false}">
+  class works!
+</p>
+<div appHighlight>
+  bonjour je teste une directive
+</div>
+
+<label>
+  <input *ngIf="show"
+         type="text" class="form-control" appRainbow>
+</label>
+<button class="btn btn-primary" (click)="show =!show"></button>

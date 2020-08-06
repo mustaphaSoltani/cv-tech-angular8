@@ -1,0 +1,5 @@
+<ol class="list-group" [ngClass]="selectedPersonne && selectedPersonne == currentCv ? 'active':''">
+  <app-item-cv *ngFor="let personne of personnes"
+    style="cursor: pointer" (selectedPersonne)="selectPersonne($event)" [personne]="personne">
+    </app-item-cv>
+</ol>
