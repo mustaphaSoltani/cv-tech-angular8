@@ -50,7 +50,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-##guide
+### guide
 api: loopback node .
 
 table personne:
@@ -63,9 +63,9 @@ Installer un serveur local: npm install http-server -g
 
 Lancer le serveur : http-server dist/formation3
 
-##Deployer sur github pages
+## Deployer sur github pages
 
-Créer un repository et mettez y votre projet
+Créer un repository et mettez y le projet
 
 installer angular-cli-ghpages : npm i angular-cli-ghpages --save-dev 
 
