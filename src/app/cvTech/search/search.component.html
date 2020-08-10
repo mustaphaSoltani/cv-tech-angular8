@@ -1,0 +1,17 @@
+  <input type="text"
+         class="form-control form-control-sm ml-3 w-75"
+         [(ngModel)]="chaine"
+         placeholder="Search"
+         aria-label="Search"
+         (keyup)="search()"
+  >
+<ol>
+  <li *ngFor="let personne of searchResult"
+      class="list-group-item"
+      (click)="selectPersonne(personne)">
+    <img src="assets/images/{{personne.path | defaultImage}}"
+         width="25px" height="25px"
+    >
+    {{personne.firstname}} {{personne.name}}
+  </li>
+</ol>

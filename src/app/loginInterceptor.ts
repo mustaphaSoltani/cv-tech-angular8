@@ -9,17 +9,21 @@ import {
 import {Observable} from "rxjs";
 
 
-export class LoginInterceptor implements HttpInterceptor{
+export class LoginInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
     const token = localStorage.getItem('token');
-    if (token){
-      const cloneReq = req.clone(
-        {
-          params : new HttpParams().set('access_token', token)
-        }
-      );
+
+    if (token) {
+      const keys = req.params.keys();
+      let params = new HttpParams();
+      for (let index = 0; index < keys.length; index++) {
+        params = params.append(keys[index], req.params.get(keys[index]));
+      }
+      params = params.append('access_token', token);
+      const cloneReq = req.clone({params});
       return next.handle(cloneReq);
-    }else {
+    } else {
       return next.handle(req);
     }
   }
@@ -27,6 +31,6 @@ export class LoginInterceptor implements HttpInterceptor{
 
 export const LoginInterceptorProvider = {
   provide: HTTP_INTERCEPTORS,
-useClass: LoginInterceptor,
+  useClass: LoginInterceptor,
   multi: true
 };

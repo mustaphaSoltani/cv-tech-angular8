@@ -29,6 +29,7 @@ import {LoginInterceptorProvider} from "./loginInterceptor";
 import {LoginGuard} from "./guard/loginGuard";
 import {LogoutGaurd} from "./guard/logoutGaurd";
 import { CvUpdateComponent } from './cvTech/cv-update/cv-update.component';
+import {SearchComponent} from "./cvTech/search/search.component";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { CvUpdateComponent } from './cvTech/cv-update/cv-update.component';
     LoginComponent,
     DefaultImagePipe,
     ObservableComponent,
-    CvUpdateComponent
+    CvUpdateComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

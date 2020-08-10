@@ -54,3 +54,24 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 api: loopback node .
 
 table personne:
+
+### Créer le build de l'application angular et la déployer sur un serveur http
+
+ng build --prod
+
+Installer un serveur local: npm install http-server -g
+
+Lancer le serveur : http-server dist/formation3
+
+##Deployer sur github pages
+
+Créer un repository et mettez y votre projet
+
+installer angular-cli-ghpages : npm i angular-cli-ghpages --save-dev 
+
+Lancer la commande ng build --prod --base-href https://USERNAME.github.io/REPOSITORY...
+
+Lancer la commande npx angular-cli-ghpages --dir = dist/[PROJECTNAME] 
+
+Accéder à votre page https://USERNAME.github.io/REPOSITORY...
+

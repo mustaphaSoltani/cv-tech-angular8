@@ -18,7 +18,9 @@ logout(){
   this.authentificationService.logout();
 this.router.navigate(['cv'])
 }
-
+isLogged(){
+    return this.authentificationService.islogged();
+}
   show() {
     this.visibility = !this.visibility ;
   }
